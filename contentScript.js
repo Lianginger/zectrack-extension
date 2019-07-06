@@ -1,12 +1,18 @@
+// 現在問題卡在我只是在操作 DOM 把 script 塞進去，但實際上他根本沒有執行
 var chart = document.createElement('DIV')
 chart.setAttribute('id', 'container')
 document.querySelector('body > div.container.mv4-l.mt3-l').append(chart)
 
-var s = document.createElement('script')
-var sjQuery = document.createElement('script')
+var s1 = document.createElement('script')
+var s2 = document.createElement('script')
+var s3 = document.createElement('script')
+var s4 = document.createElement('script')
 var sHighcharts = document.createElement('script')
-sjQuery.src = 'https://code.jquery.com/jquery-3.3.1.slim.min.js'
-s.src = 'https://code.highcharts.com/highcharts.src.js'
+s1.src = 'https://code.highcharts.com/highcharts.js'
+s2.src = 'https://code.highcharts.com/modules/series-label.js'
+s3.src = 'https://code.highcharts.com/modules/exporting.js'
+s4.src = 'https://code.highcharts.com/modules/export-data.js'
+
 sHighcharts.innerHTML = `
   Highcharts.chart('container', {
   title: {
@@ -78,6 +84,8 @@ sHighcharts.innerHTML = `
   }
 })
 `
-document.querySelector('body').append(sjQuery)
-document.querySelector('body').append(s)
-document.querySelector('body').append(sHighcharts)
+document.querySelector('body > div.container.mv4-l.mt3-l').append(s1)
+document.querySelector('body > div.container.mv4-l.mt3-l').append(s2)
+document.querySelector('body > div.container.mv4-l.mt3-l').append(s3)
+document.querySelector('body > div.container.mv4-l.mt3-l').append(s4)
+document.querySelector('body > div.container.mv4-l.mt3-l').append(sHighcharts)
