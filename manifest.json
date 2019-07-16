@@ -1,7 +1,7 @@
 {
   "name": "Zectrack",
-  "version": "1.0",
-  "description": "Zectrack 是一個免費的嘖嘖專案分析神器，讓你輕鬆追蹤專案歷史紀錄，分析集資金額與贊助人數掌握專案進度。",
+  "version": "1.0.1",
+  "description": "Zectrack 是一個免費的嘖嘖專案分析神器，從上百個集資專案中為你精選出最熱門的趨勢項目🔥🔥🔥",
   "permissions": [
     "activeTab",
     "declarativeContent",
